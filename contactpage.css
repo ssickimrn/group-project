@@ -1,0 +1,166 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2ebe3; /* Warm, cozy café background */
+    color: #4a3f35; /* Earthy brown text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'); /* Subtle grunge texture */
+    background-blend-mode: multiply;
+    animation: fadeInBackground 3s ease-in-out;
+}
+
+.forms-container {
+    display: flex;
+    gap: 2rem; /* Space between the forms */
+    justify-content: center;
+    flex-wrap: wrap; /* Stack forms on smaller screens */
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.contact, .review {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    flex: 1; /* Both sections take equal space */
+    max-width: 500px;
+    min-width: 300px; /* Prevent sections from shrinking too much */
+    animation: fadeInCard 1.5s ease-in-out both;
+    border: 1px solid #d4c8b5; /* Subtle beige border */
+}
+
+.contact-info {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #9c6a56; /* Coffee brown */
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #4a3f35;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #b6a89e;
+    border-radius: 8px;
+    background: #faf7f4;
+    color: #4a3f35;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.9rem 1.5rem;
+    background: #9c6a56;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #7b5042;
+}
+
+.back-to-home, .feedback {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.home-button, .feedback-button {
+    text-decoration: none;
+    color: #fff;
+    background: #9c6a56;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.home-button:hover, .feedback-button:hover {
+    background: #7b5042;
+    transform: scale(1.05);
+}
+
+.social-media {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.social-media p {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #4a3f35;
+}
+
+.social-link {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #9c6a56;
+    font-weight: 700;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+    color: #7b5042;
+    transform: scale(1.1);
+}
+
+/* Background Animation */
+@keyframes fadeInBackground {
+    0% {
+        background-color: #fffcf8;
+        opacity: 0;
+    }
+    100% {
+        background-color: #f2ebe3;
+        opacity: 1;
+    }
+}
+
+/* Card Fade-in Animation */
+@keyframes fadeInCard {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Aurora Café</title>
+    <link rel="stylesheet" href="setmenu.css">
+</head>
+<body>
+    <header>
+        <h1>Aurora Café Menu</h1>
+        <button id="menuPageButton" onclick="redirectToMenuPage()">Go Back to Menu Page</button>
+    </header>
+
+    <main>
+        <section id="menu">
+            <h2>Menu Sets</h2>
+
+            <!-- Single Set -->
+            <div class="menu-item">
+                <h3>Single Set</h3>
+                <p>Perfect for one, includes a main dish, drink, and dessert.</p>
+                <ul>
+                    <li>Side Dish: Grilled Sandwich</li>
+                    <li>Drinks: Iced Lemon Tea</li>
+                </ul>
+                <p><strong>Price: RM14.90</strong></p>
+                <button onclick="addToCart('Single Set', 14.90)">Add to Cart</button>
+            </div>
+
+            <!-- Couple Set -->
+            <div class="menu-item">
+                <h3>Couple Set</h3>
+                <p>Great for two, includes two main dishes, drinks, and a shared dessert.</p>
+                <ul>
+                    <li>Main Dishes: Spaghetti Carbonara, Grilled Chicken</li>
+                    <li>Drinks: Cappuccino, Orange Juice</li>
+                    <li>Shared Dessert: Cheesecake</li>
+                </ul>
+                <p><strong>Price: RM45</strong></p>
+                <button onclick="addToCart('Couple Set', 45.00)">Add to Cart</button>
+            </div>
+
+            <!-- Family Set -->
+            <div class="menu-item">
+                <h3>Family Set</h3>
+                <p>Ideal for families, includes four main dishes, drinks, and desserts.</p>
+                <ul>
+                    <li>Main Dishes: Spaghetti Bolognese, Grilled Salmon</li>
+                    <li>Side Dishes: Garden Salad, Chicken Wrap</li>
+                    <li>Drinks: Lemonade, Orange Juice and 2 remaining can choose from beverages or refreshers section</li>
+                    <li>Desserts: 2x Ice Cream Sundaes, Fruit Tart</li>
+                </ul>
+                <p><strong>Price: RM74.90</strong></p>
+                <button onclick="addToCart('Family Set', 74.90)">Add to Cart</button>
+            </div>
+
+            <!-- Kids Meal -->
+            <div class="menu-item">
+                <h3>Kids Meal</h3>
+                <p>Designed for kids, includes a main dish, drink, and a small treat.</p>
+                <ul>
+                    <li>Side Dish: Chicken Wrap</li>
+                    <li>Drink: Apple Juice</li>
+                    <li>Dessert: Blueberry Muffin</li>
+                </ul>
+                <p><strong>Price: RM10.90</strong></p>
+                <button onclick="addToCart('Kids Meal', 10.90)">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025Aurora Café. All Rights Reserved.</p>
+        <p id="last-updated">Last Updated: </p>
+    </footer>
+
+    <script src="setmenu.js"></script>
+
+</body>
+</html>

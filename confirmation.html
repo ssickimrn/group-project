@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Our Cafe</title>
+    <link rel="stylesheet" href="confirmationpage.css">
+</head>
+<body>
+    <header>
+        <h1>Payment Successful</h1>
+    </header>
+
+    <section id="confirmation">
+        <h2>Thank you for your purchase!</h2>
+        <div id="orderSummary">
+            <h3>Receipt</h3>
+            <p><strong>Name:</strong> <span id="customerName"></span></p>
+            <p><strong>Email:</strong> <span id="customerEmail"></span></p>
+            <hr>
+            <div id="itemsList">
+                <h4>Items Purchased:</h4>
+            </div>
+            <div class="total-price">
+                <strong>Total: </strong>RM<span id="totalPrice"></span>
+            </div>
+        </div>
+        <button onclick="goToHome()">Go to Home</button>
+    </section>
+
+    <script src="confirmation.js"></script>
+</body>
+</html>

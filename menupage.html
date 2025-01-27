@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Selection - Aurora Café</title>
+    <link rel="stylesheet" href="menupage.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Aurora Café Menu</h1>
+    </header>
+
+    <nav>
+        <div class="navbar-brand">
+            <img src="images/Aurora Café.png" alt="Cafe Logo" class="logo">
+            <span class="cafe-name">Aurora Café</span>
+        </div>
+        <div class="navbar-links">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <div class="dropdown">
+            <a href="books.html" class="dropbtn">Book Playground</a>
+            <div class="dropdown-content">
+                <a href="books.html#adventure">Adventure</a>
+                <a href="books.html#nonfiction">Non-fiction</a>
+                <a href="books.html#mystery">Mystery</a>
+                <a href="books.html#romance">Romance</a>
+                <a href="books.html#fantasy">Fantasy</a>
+            </div>
+        </div>
+        <a href="liveshow.html">Live Show</a>
+        <a href="location.html">Location</a>
+        <a href="chef.html">Our Chef</a>
+        <a href="service.html">Cooking Lesson</a>
+        <a href="contact.html">Contact/Customer Review</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="menu-options">
+            <h2>Choose Your Option</h2>
+            <div class="menu-choice">
+                <h3>Menu Sets</h3>
+                <p>Explore our curated sets for singles, couples, families, and kids.</p>
+                <button onclick="redirectTo('setmenu.html')">View Menu Sets</button>
+            </div>
+
+            <div class="menu-choice">
+                <h3>Cafe Menu</h3>
+                <p>Discover our full menu of beverages, pastries, and snacks.</p>
+                <button onclick="redirectTo('cafemenu.html')">View Cafe Menu</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025Aurora Café. All Rights Reserved.</p>
+        <p id="last-updated">Last Updated: </p>
+    </footer>
+
+    <script src="menupage.js"></script>
+</body>
+</html>

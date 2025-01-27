@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7eee2; /* Warm beige background */
+    color: #4e342e; /* Coffee brown text */
+}
+
+/* Header Styles */
+header {
+    background-color: #6d4c41; /* Rich coffee brown */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Brush Script MT', cursive; /* Stylish font */
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Menu Page Button */
+#menuPageButton {
+    background-color: #8d6e63; /* Light coffee shade */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Verdana', sans-serif;
+    border-radius: 20px; /* Rounded button */
+    cursor: pointer;
+    margin: 10px auto;
+    display: block; /* Center the button */
+    transition: background-color 0.3s, transform 0.2s;
+    animation: bounceIn 1.2s ease-in-out;
+}
+
+#menuPageButton:hover {
+    background-color: #4e342e; /* Darker shade on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Menu Section Styles */
+#menu {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    animation: slideUp 1s ease-in-out;
+}
+
+#menu h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #8d6e63; /* Coffee accent */
+    padding-bottom: 10px;
+    color: #6d4c41;
+    font-family: 'Brush Script MT', cursive;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.menu-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f7f4f2; /* Warm off-white */
+    border: 1px solid #e0c8c2; /* Soft coffee border */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.menu-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #4e342e;
+    font-family: 'Verdana', sans-serif;
+}
+
+.menu-item p {
+    margin: 5px 0;
+    line-height: 1.5;
+    color: #5d4037; /* Medium coffee text */
+}
+
+.menu-item strong {
+    color: #6d4c41;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1em;
+    color: white;
+    background-color: #6d4c41;
+    border: none;
+    border-radius: 20px; /* Rounded buttons */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    animation: zoomIn 1.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #4e342e;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #4e342e; /* Deep coffee shade */
+    color: white;
+    font-size: 0.9em;
+    margin-top: 40px;
+    font-family: 'Verdana', sans-serif;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 0 15px;
+    }
+
+    #menu {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

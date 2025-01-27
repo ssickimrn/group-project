@@ -1,0 +1,297 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f4e9; /* Warm parchment-like background */
+    color: #4e342e; /* Rich coffee brown text */
+}
+
+/* Header Styles */
+header {
+    background-color: #6d4c41; /* Coffee brown */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Brush Script MT', cursive; /* Elegant cursive font */
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #4e342e; /* Darker coffee shade */
+    text-align: center;
+    padding: 10px 20px; /* Added horizontal padding for better spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Brand Styles */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 45px;
+    width: auto;
+    border-radius: 50%; /* Circular logo for aesthetics */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Subtle zoom effect */
+}
+
+.cafe-name {
+    font-family: 'Verdana', sans-serif, cursive; /* Elegant, handwritten style */
+    font-size: 1.6em;
+    color: #f7f4e9; /* Light cream */
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Navigation Links */
+.navbar-links {
+    display: flex;
+    gap: 15px; /* Balanced spacing between links */
+}
+
+nav a {
+    color: #f7f4e9; /* Light cream */
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Verdana', sans-serif; /* Clean and professional sans-serif */
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: #ffd54f; /* Golden highlight */
+    transform: scale(1.1); /* Slight zoom */
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #4e342e;
+    color: #f7f4e9;
+    margin: 0 15px;
+    font-size: 1em;
+    font-family: 'Verdana', sans-serif;
+    transition: color 0.3s, transform 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    color: #d4a373; /* Hover effect for button */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9eae1; /* Light cream */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    animation: dropdownIn 0.3s ease-out;
+}
+
+.dropdown-content a {
+    color: #3a2e2a; /* Coffee brown */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.1em;
+}
+
+.dropdown-content a:hover {
+    background-color: #d4a373; /* Light golden */
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Section Styles */
+#menu-options {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    animation: slideUp 1s ease-in-out;
+}
+
+#menu-options h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #6d4c41;
+    font-family: 'Brush Script MT', cursive;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+/* Menu Choice Cards */
+.menu-choice {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f7f4e9; /* Light parchment */
+    border: 1px solid #d7ccc8; /* Soft coffee border */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s;
+}
+
+.menu-choice:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+}
+
+.menu-choice h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #4e342e;
+    font-family: 'Verdana', sans-serif;
+}
+
+.menu-choice p {
+    margin: 5px 0 15px;
+    line-height: 1.6;
+    color: #5d4037;
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1em;
+    color: white;
+    background-color: #6d4c41;
+    border: none;
+    border-radius: 20px; /* Rounded buttons */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    animation: zoomIn 1s ease-in-out;
+}
+
+button:hover {
+    background-color: #4e342e;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #4e342e; /* Deep coffee brown */
+    color: white;
+    font-size: 0.9em;
+    margin-top: 40px;
+    font-family: 'Verdana', sans-serif;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes dropdownIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 0 15px;
+    }
+
+    #menu-options {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

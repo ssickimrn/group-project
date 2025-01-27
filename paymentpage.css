@@ -1,0 +1,205 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdf7ed; /* Creamy beige for rustic vibes */
+    margin: 0;
+    padding: 0;
+    color: #4b3621; /* Warm brown for text */
+    transition: background-color 0.3s ease;
+}
+
+/* Header */
+header {
+    background-color: #c69c6d; /* Warm saddle brown */
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif; /* Adds a rustic charm */
+    margin: 0;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #f5d0a9; /* Light tan */
+    padding: 12px 0;
+    text-align: center;
+    border-top: 2px solid #c69c6d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #4b3621;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #a0522d; /* Saddle brown accent */
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+/* Checkout Section */
+#checkout {
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c69c6d;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Checkout Title */
+#checkout h2 {
+    text-align: center;
+    font-size: 2.4em;
+    color: #8b4513; /* Saddle brown */
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Cart Items */
+#cartItems {
+    margin: 20px 0;
+}
+
+.cart-item {
+    background-color: #faecd8; /* Warm beige */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #d2a679;
+    display: flex;
+    justify-content: space-between;
+    animation: fadeInUp 1s ease-out;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cart-item:hover {
+    background-color: #f9dcc4;
+    transform: translateX(5px);
+}
+
+.cart-item p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #4b3621;
+    font-family: 'Courier New', Courier, monospace; /* Adds rustic charm */
+}
+
+/* Total Price */
+#totalPrice {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #8b4513;
+    text-align: right;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+    color: #4b3621;
+}
+
+form input {
+    padding: 12px;
+    font-size: 1.1em;
+    border: 1px solid #d2a679; /* Tan outline */
+    border-radius: 10px;
+    width: 100%;
+    background-color: #fffaf2; /* Subtle cream */
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #8b4513;
+    outline: none;
+    animation: pulse 1s infinite;
+}
+
+/* Submit Button */
+form button {
+    background-color: #8b4513; /* Saddle brown */
+    color: white;
+    padding: 14px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #a0522d;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #checkout {
+        padding: 20px;
+    }
+
+    form input,
+    form button {
+        font-size: 1em;
+    }
+}

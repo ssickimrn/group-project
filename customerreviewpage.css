@@ -1,0 +1,170 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Softer font for soft girl aesthetic */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f3eb; /* Soft beige background */
+    color: #4e3b31; /* Warm brown text color */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Container Styling */
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    background: linear-gradient(145deg, #fff9f2, #f1e5d8); /* Soft beige gradient for a cozy feel */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out; /* Animation to fade in the container */
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    color: #c38b6d; /* Soft warm brown for the header */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out; /* Animation to slide in the title */
+}
+
+/* Review Section Styling */
+.review {
+    border-bottom: 1px solid #d1b59b; /* Soft brown border to separate reviews */
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Last Review Styling */
+.review:last-child {
+    border-bottom: none;
+}
+
+/* Review Name Styling */
+.review .name {
+    font-weight: bold;
+    color: #b47b5d; /* Soft caramel brown color for names */
+    font-size: 1.2em;
+    animation: bounceIn 1s ease-in-out; /* Bounce-in animation for the name */
+}
+
+/* Review Date Styling */
+.review .date {
+    font-size: 0.9em;
+    color: #b69e8b; /* Soft tan color for date */
+}
+
+/* Review Rating Styling */
+.review .rating {
+    color: #e08d5e; /* Warm brown-orange color for rating stars */
+}
+
+/* Review Feedback Styling */
+.review .feedback {
+    margin: 10px 0;
+    color: #4e3b31; /* Darker shade of brown for text */
+}
+
+/* Back to Home Button Styling */
+.contact-button {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 12px 25px;
+    background-color: #d9c8a2; /* Soft beige-brown background */
+    color: #4e3b31; /* Text color */
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Back to Home Button */
+.contact-button:hover {
+    background-color: #d0b285; /* Soft caramel hover effect */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Animation for smooth fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation for slide-in effect */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Animation for bounce-in effect */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Back to Top Button Styling */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #c3a581; /* Soft warm brown */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    transition: opacity 0.3s ease;
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+}
+
+#backToTop:hover {
+    background-color: #b38a5d; /* Slightly darker brown hover effect */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #d1c3a1; /* Soft light beige-brown background for footer */
+    color: #4e3b31;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+    font-family: 'Lora', serif;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+/* Footer Text Styling */
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Smooth Scroll Effect for Back to Top Button */
+html {
+    scroll-behavior: smooth;
+}

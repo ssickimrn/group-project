@@ -1,0 +1,267 @@
+/* General body style */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4e6d8; /* Soft beige background */
+    color: #3a2e2a; /* Coffee brown text */
+}
+
+/* Header style */
+header {
+    background-color: #8c4b3d; /* Warm brown */
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    font-family: 'Dancing Script', cursive; /* Elegant, playful cursive font */
+    position: relative;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #cfa58c; /* Light caramel brown */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar Brand (Logo and Cafe Name) */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand .logo {
+    height: 50px; /* Adjust logo size */
+    margin-right: 10px;
+}
+
+.navbar-brand .cafe-name {
+    font-size: 2em;
+    color: #6b4f36; /* Darker coffee brown */
+    font-weight: bold;
+    font-family: 'Dancing Script'; /* Stylish cursive font */
+    letter-spacing: 1px;
+}
+
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links a {
+    color: #6b4f36; /* Darker coffee brown */
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #8c4b3d; /* Warm brown */
+    transform: scale(1.1); /* Slight zoom */
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #cfa58c;
+    color: #6b4f36;
+    margin: 0 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: 'Lora', serif;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.dropbtn:hover {
+    color: #8c4b3d;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f7f1e1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    animation: dropdownIn 0.3s ease-out;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: #3a2e2a;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #8c4b3d; /* Warm brown */
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Chef Slider */
+.chef-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f4e6d8; /* Soft beige */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.chef-profile {
+    flex: 1 0 100%;
+    display: none;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.chef-profile.active {
+    display: block;
+}
+
+.chef-image {
+    width: 220px; /* Set a fixed width */
+    height: 320px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image fills the frame without distortion */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centers the image */
+}
+
+.chef-info {
+    padding: 20px;
+    font-family: 'Dancing Script', cursive;
+    color: #6b4f36; /* Darker coffee brown */
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.slider-controls button {
+    background-color: #8c4b3d;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slider-controls button:hover {
+    background-color: #6b4f36; /* Darker coffee brown */
+}
+
+.video-container {
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Slider Controls */
+#prev, #next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#prev:hover, #next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+footer {
+    background-color: #cfa58c;
+    color: #6b4f36;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Lora', serif;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    border-top: 2px solid #8c4b3d;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes dropdownIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* YouTube Thumbnail Consistency */
+iframe {
+    object-fit: cover;
+    border-radius: 8px;
+    height: 315px;
+    width: 100%;
+    max-width: 560px; /* Maintain consistent width */
+}

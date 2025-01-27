@@ -1,0 +1,181 @@
+/* General body styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #faf3e0; /* Creamy café beige */
+    margin: 0;
+    padding: 0;
+    color: #3a2e2a; /* Rich coffee brown */
+    animation: fadeIn 1s ease-out;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #e4b7a0, #c49789); /* Gradient in café tones */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px rgba(228, 183, 160, 0.5); /* Subtle glow effect */
+    animation: shimmer 2s linear infinite;
+}
+
+/* Navigation Links */
+nav a {
+    margin: 10px;
+    color: #3a2e2a;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #e4b7a0;
+    transform: scale(1.1);
+}
+
+/* Confirmation Section */
+section#confirmation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fff8e7; /* Light café cream */
+}
+
+/* Order Summary Container */
+#orderSummary {
+    width: 320px;
+    background: linear-gradient(135deg, #fff8e7, #e4b7a0); /* Café tones with subtle gradient */
+    padding: 20px;
+    border: 2px solid #d1a784; /* Warm brown border */
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(209, 167, 132, 0.5); /* Glow for Y2K aesthetic */
+    text-align: left;
+    position: relative;
+    animation: slideIn 1s ease-out;
+}
+
+/* Order Summary Heading */
+#orderSummary h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d1a784;
+    padding-bottom: 10px;
+    color: #3a2e2a;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    animation: bounce 2s ease infinite alternate;
+}
+
+/* Order Items Style */
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #3a2e2a;
+}
+
+/* Total Price Style */
+.total-price {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #3a2e2a;
+    border-top: 2px solid #d1a784;
+    padding-top: 10px;
+    text-align: right;
+}
+
+/* Button Style */
+button {
+    background: linear-gradient(90deg, #d1a784, #e4b7a0); /* Café tones with gradient */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(209, 167, 132, 0.3); /* Y2K glossy glow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: pulse 1.5s infinite alternate;
+}
+
+button:hover {
+    background-color: #c49789; /* Warmer café brown hover */
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    #orderSummary {
+        width: 80%; /* Wider order summary on smaller screens */
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

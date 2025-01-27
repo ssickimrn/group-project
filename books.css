@@ -1,0 +1,317 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://i.pinimg.com/736x/d7/4c/c7/d74cc7f54f37f55f3edfe798127472ff.jpg);
+    color: #3a2e2a; /* Warm coffee brown */
+    animation: fadeInBackground 1.5s ease-in-out;
+}
+
+header {
+    background: linear-gradient(135deg, #d4a373, #6b4226); /* Rich café tones */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #d4a373;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    animation: bounceIn 1.5s ease-in-out;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #6b4226;
+}
+
+/* Navigation */
+nav {
+    background: #6b4226; /* Dark coffee brown */
+    text-align: center;
+    padding: 15px 20px; /* Added horizontal padding for a cleaner layout */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInNav 1.2s ease-in-out;
+    border-bottom: 3px solid #d4a373; /* Café latte highlight */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Balanced spacing */
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Subtle zoom effect */
+}
+
+.cafe-name {
+    font-family: 'Poppins', sans-serif, cursive; /* Elegant handwritten font */
+    font-size: 1.8em;
+    color: #f9eae1; /* Light café cream */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #f9eae1; /* Light café cream */
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    color: #d4a373; /* Café latte color */
+    text-shadow: 1px 1px #f9eae1;
+    transform: scale(1.1); /* Slight enlargement */
+}
+
+/* Animation for Navigation Bar */
+@keyframes fadeInNav {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ /* Audio player styling */
+ audio {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #6b4226; /* Adding subtle background */
+    animation: fadeIn 2s ease-out;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+}
+
+/* Book Genre Sections */
+.book-genre {
+    margin-bottom: 40px;
+}
+
+.book-genre h3 {
+    font-size: 2em;
+    color: #6b4226;
+    border-bottom: 2px solid #d4a373;
+    padding-bottom: 10px;
+    text-shadow: 1px 1px #d4a373;
+}
+
+/* Book Grid */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Increased spacing between cards */
+    padding: 20px;
+    justify-items: center; /* Center content within grid items */
+}
+
+/* Book Card */
+.book-card {
+    width: 300px; /* Increase the width of the cards */
+    height: 450px; /* Increase the height of the cards */
+    perspective: 1000px; /* Create 3D space */
+    position: relative;
+}
+
+/* Card Flip */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.book-card:hover .card-inner {
+    transform: rotateY(180deg); /* Flip the card */
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back side when flipped */
+}
+
+.card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.card-front img {
+    width: auto;
+    height: 90%; /* Ensure portrait style by fixing height */
+    max-height: 320px; /* Cap the height */
+    border-radius: 8px; /* Add rounded corners for a softer look */
+}
+
+.card-front h3 {
+    margin-top: 15px;
+    font-size: 20px; /* Increase the font size */
+    text-align: center;
+}
+
+.card-back {
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transform: rotateY(180deg); /* Initially hide the back */
+}
+
+.card-back p {
+    font-size: 16px; /* Increase font size for better readability */
+    color: #333;
+}
+
+/* Make the book titles and descriptions look better on smaller screens */
+@media (max-width: 768px) {
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Slightly smaller cards on mobile */
+    }
+
+    .book-card {
+        width: 250px; /* Smaller card width */
+        height: 400px; /* Smaller card height */
+    }
+
+    .card-front h3 {
+        font-size: 18px; /* Slightly smaller text */
+    }
+
+    .card-back p {
+        font-size: 14px; /* Smaller text for description */
+    }
+}
+
+/* Style for the "Visit Our Cafe for More Options" message */
+.more-options {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Style for the Back to Top button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3a2e2a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Make sure it's above other content */
+    transition: opacity 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #3a2e2a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #6b4226, #3a2e2a); /* Warm café blend */
+    color: #f9eae1; /* Light cream */
+    font-size: 0.9em;
+    margin-top: 40px;
+    text-shadow: 1px 1px #000;
+}
+
+/* Animations */
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInNav {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .book-card {
+        padding: 12px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 1em;
+    }
+}
